@@ -10,3 +10,15 @@ for (var i = 99; i > 0; i--) {
 	}
 	console.log(i + " "+ bottlesOfBeer +" on the wall, " + i + " bottles of beer. Take one down, pass it around, " + (i-1) + " bottles of beer on the wall." + "\n");
 }
+
+// Note on ++/-- placement:
+
+/*
+var j = 100;
+console.log(j);
+var k = j++ // first assigns j to k, then makes j's value 101
+console.log(k,j);
+j = 100;
+console.log(j);
+var z = ++j; // first makes j's value 101, then assigns to z
+console.log(z,j);
