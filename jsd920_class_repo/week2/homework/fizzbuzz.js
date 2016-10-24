@@ -14,9 +14,27 @@ for(var i = 0; i <= 100; i++) {
 		console.log(i, "fizzbuzz");
 	} else if (i % 3 === 0) {
 		console.log(i, "- fizz");
+		// (i % 3 === 0) asks: When I divide 'i' by 3, do I get 0 as a remainder, i.e. is 'i' fully divisible by 3? (i % 3) asks: Do I get any remainder at all?
 	} else if (i % 5 === 0) {
 		console.log(i, "- buzz");
 	} else {
 		console.log(i, '- ');
 	}
 }
+
+// Note on printing numbers:
+/*
+
+Print all even numbers between 0 and 100, inclusively (i.e. including 0):
+
+for (i = 0l i <= 100; i++) {
+	if (i % 2 === 0)
+	console.log(i);
+}
+
+...but a simpler way is...
+for (i = 0; i <= 100; i +=2) {
+	console.log(i);
+}
+
+*/
