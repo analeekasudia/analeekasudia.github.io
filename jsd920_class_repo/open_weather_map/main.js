@@ -62,7 +62,7 @@ function temperatureToColor(temperature) {
 // Another way to structure the above function: var processWeather = function(response){}
 
 $(document).ready(function () {
-  var apiKey = '0eadf9a9141e80aed512ae6360edf643'; // this key is from your personal analeekasudia.github@gmail.com account
+  var apiKey = '0eadf9a9141e80aed512ae6360edf643'; // via analeekasudia.github@gmail.com
   function getWeatherForCity(city) {
     var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=0eadf9a9141e80aed512ae6360edf643";
     $.get(weatherUrl, processWeather);
