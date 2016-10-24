@@ -38,7 +38,7 @@ function processWeather(response) {
   console.log(response.main);
   console.log(response["main"]["temp"])
   */
-  var outputWeather = "<p>Temperature (&#176;F)<strong>" + Math.ceil(response.main.temp) + "</strong></p><p>Humidity<strong>" + response.main.humidity + "</strong></p><p>Wind Speed<strong> " + Math.ceil(response.wind.speed) + "</strong></p>"; // Math.ceil will round the temperature and wind speed *up*, so it doesn't display a decimal.
+  var outputWeather = "<p>Temperature (&#176;F)<strong>" + Math.ceil(response.main.temp) + "</strong></p><p>Humidity (%)<strong>" + response.main.humidity + "</strong></p><p>Wind (mph)<strong> " + Math.ceil(response.wind.speed) + "</strong></p>"; // Math.ceil will round the temperature and wind speed *up*, so it doesn't display a decimal.
   var weatherDiv = document.getElementById('nyc-weather');
   weatherDiv.innerHTML = outputWeather  // Don't do .appendChild if you're not creating a new HTML tag (?)
   document.body.style.background = temperatureToColor(response.main.temp);
