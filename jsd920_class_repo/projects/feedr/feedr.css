@@ -1,0 +1,40 @@
+* {margin: 0; padding: 0; list-style: none; text-decoration: none;}
+a {cursor: pointer;}
+body {background: #fdd; color: #004; font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;}
+
+footer {clear: both; font-size: 12px; text-align: center; color: #c78;}
+footer a {display: inline-block; margin: 60px 0 40px; padding-bottom: 1px; color: #c78; font-weight: bold; border-bottom: 1px dashed #c78;}
+footer a:focus, footer a:hover {color: #004; border-bottom: 1px dashed #004;}
+
+header {width: 960px; margin: 0 auto; padding: 40px 0 20px; overflow: hidden;}
+header h1 {float: left; font: 80px/80px 'Sarina', cursive;}
+header h1 a, main section p a, main section p a:visited {color: #004;}
+header nav {float: right; margin-top: 38px;}
+header nav input {float: right; width: 220px; margin-left: 10px; padding: 6px 10px; border: none; border-radius: 3px; font-size: 12px;}
+header nav input[value] {color: #c78;}
+header ul {float: left;}
+header ul li {float: left; margin-left: 10px;}
+header ul li a {display: inline-block; padding: 6px 10px; color: #fdd; font-size: 12px; line-height: 16px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; background: #004; border-radius: 3px;}
+header ul li a:focus, header ul li a:hover {background: #c78;}
+
+main {width: 960px; margin: 0 auto;}
+main article {display: block; clear: both; width: 100%; border-top: 1px dashed #c78}
+main article span {display: inline-block;}
+main article em {float: right;}
+main section {clear: both; padding: 20px 0 40px; border-top: 1px dashed #cd919e; overflow: hidden;}
+main section h2 {float: left; width: 240px; font-size: 18px; line-height: 24px;}
+main section p {float: right; width: 680px; margin-bottom: 18px; font-size: 18px; line-height: 24px;}
+main section p a {display: inline-block; border-bottom: 1px dashed #004;}
+main section p a:focus, main section p a:hover {color: #c78; border-bottom: 1px dashed #c78;}
+main section p input[type=checkbox] {width: 18px; height: 18px;}
+main section p input[type=checkbox]:checked {background: #004;}
+main section p span {font: 16px/24px monospace; color: #c07; white-space: pre-wrap;}
+
+@media only screen and (max-width : 800px) {
+	div em, header form, header h1 {float: none;}
+	header {width: 100%;}
+}
+
+@media only screen and (max-width : 480px) {
+
+}
