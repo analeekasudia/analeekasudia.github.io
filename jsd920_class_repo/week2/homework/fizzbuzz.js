@@ -1,3 +1,4 @@
+
 // FIZZBUZZ
 // Using loops, boolean logic, and if/else statements, incrementally build the common fizzbuzz loop.
 // - In the loop, every time a number is divisible by *3*, instead of logging the number itself, the word "fizz" should appear.
