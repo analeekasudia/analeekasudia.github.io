@@ -18,9 +18,14 @@ header ul li a {display: inline-block; padding: 6px 10px; color: #fdd; font-size
 header ul li a:focus, header ul li a:hover {background: #c78;}
 
 main {width: 960px; margin: 0 auto;}
-main article {display: block; clear: both; width: 100%; border-top: 1px dashed #c78}
-main article span {display: inline-block;}
-main article em {float: right;}
+main article {display: block; clear: both; width: 100%; padding: 20px 0; border-top: 1px dashed #c78; overflow: hidden;}
+main article:hover, main article:focus {background: #fff;}
+main article em {float: right; margin-right: 15px; color: #c78; font-size: 18px;}
+main article img {float: left; max-width: 60px; margin: 0 20px; border-radius: 3px;}
+main article span {float: left;}
+main article span h3 {width: 780px; margin-bottom: 3px;}
+main article span h3 a {font-size: 18px; line-height: 24px; color: #004;}
+main article span strong {text-transform: uppercase; font-size: 12px; line-height: 16px; color: #c78;}
 main section {clear: both; padding: 20px 0 40px; border-top: 1px dashed #cd919e; overflow: hidden;}
 main section h2 {float: left; width: 240px; font-size: 18px; line-height: 24px;}
 main section p {float: right; width: 680px; margin-bottom: 18px; font-size: 18px; line-height: 24px;}
