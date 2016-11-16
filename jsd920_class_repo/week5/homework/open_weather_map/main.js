@@ -12,7 +12,7 @@ $(document).ready(function () {
 
   // var apiKey = '0eadf9a9141e80aed512ae6360edf643'; ..redundant if already in the URL after APPID=___
   function getWeatherForCity(city) {
-    var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=0eadf9a9141e80aed512ae6360edf643";
+    var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&APPID=0eadf9a9141e80aed512ae6360edf643";
     $.get(weatherUrl, processWeather);
     // .done(function(response){}) (don't put *all* of your code in here)
     // .fail(function(xhr){}) (acronym means XML HTTP Request)
