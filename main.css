@@ -1,0 +1,112 @@
+*, *:before, *:after {box-sizing: inherit;}
+html {box-sizing: border-box; overflow-y: scroll;}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary, textarea, button {margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; background: transparent; list-style: none; text-decoration: none;}
+
+a {cursor: pointer;}
+
+body {background: #fcfcfc; color: #111; -webkit-animation: fadein 1.5s; -moz-animation: fadein 1.5s; -ms-animation: fadein 1.5s; -o-animation: fadein 1.5s; animation: fadein 1.5s;}
+
+figure {margin: 30px 0 0;}
+figure figcaption {margin: 0 auto 60px; font: italic 12px/20px Arial, Helvetica, sans-serif; color: #aaa; text-align: center;}
+figure figcaption a {color: #888; /* repeats on :hover/:focus */ text-decoration: underline;}
+figure figcaption a:hover, main p a:hover, main p a:focus, header h2 a:hover, header h2 a:focus, #projects h3 a:hover, #projects h3 a:focus {text-decoration: underline;}
+figure img {display: block; margin: 0 auto 25px; border: 1px solid #ddd;}
+
+footer {clear: both; width: 1020px; margin: 90px auto; font: 11px/15px Arial, Helvetica, sans-serif; text-align: center; color: #aaa; overflow: hidden;}
+footer a {float: left; margin-right: 15px; padding-right: 15px; border-right: 1px solid #ddd; color: #111;}
+footer a:hover {color: #08a;}
+footer a:last-of-type {border-right: none;}
+footer p {float: right; display: inline-block;}
+
+header {width: 100%; margin: 90px 0; overflow: hidden;}
+header h1 {float: left; width: 480px; padding: 5px 0 0; text-align: center; font: normal 60px/72px 'Rock Salt', cursive; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #fff; border-radius: 4px;}
+header h2 {float: right; width: 480px; font: 16px/26px 'Slabo 13px', serif;}
+
+main, #wrapper {width: 1020px; margin: 0 auto;}
+main a#home {display: inline-block; height: 35px; padding: 10px 15px; background: #111; font: 16px/16px 'Slabo 13px', serif; color: #fff; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;}
+main a#home:hover, main a#home:focus, section#timeline div ul.bars li a:hover {background: #08a;}
+main h1 {margin: 60px 0 30px; text-align: center; font: 36px/48px 'Rock Salt', cursive; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+main p {width: 720px; margin: 0 auto; padding-bottom: 15px; font: 16px/26px 'Slabo 13px', serif;}
+main p a, header h2 a {color: #08a;}
+
+#projects h3 {padding: 12px 0 30px; color: #aaa; font: bold italic 12px/20px Arial, Helvetica, sans-serif; border-top: 1px solid #ddd;}
+#projects h3 a {float: right; color: #08a;}
+#projects ul {width: 100%; margin-bottom: 30px; overflow: hidden;}
+#projects ul li {float: left; width: 480px; height: 260px; margin-bottom: 60px; border: 1px solid #ddd; border-radius: 5px;}
+#projects ul li:nth-child(even) {margin-left: 60px;}
+#projects ul li a {display: none;}
+#projects ul li:hover a, #projects ul li:hover a {display: block; position: absolute; z-index: 99; width: 480px; margin: -2px 0 0 -2px; padding: 108px 0; text-align: center; color: #fff; font: 36px/44px 'Slabo 13px', serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: rgba(0,0,0,0.875); border-radius: 4px; -webkit-animation: fadein .5s; -moz-animation: fadein .5s; -ms-animation: fadein .5s; -o-animation: fadein .5s; animation: fadein .5s;}
+#projects ul li img {width: 100%; height: 100%; border-radius: 4px;}
+#projects-mobile-only {display: none;}
+
+#stories {width: 720px; margin: 0 auto; font: 16px/26px Arial, Helvetica, sans-serif;}
+#stories ul li {padding: 12px 10px 10px; border-top: 1px solid #ddd; overflow: hidden;}
+#stories ul li a {font-weight: bold; color: #111;}
+#stories ul li:hover a, #stories ul li:focus a, #stories ul li a:hover, #stories ul li a:focus, #stories ul li:hover a i, #stories ul li:focus a i {color: #08a;}
+#stories ul li a i {font-weight: normal; font-size: 12px; line-height: 20px; color: #aaa;}
+#stories ul li a span {display: inline-block; float: right; width: 520px;}
+
+#timeline {overflow-x: scroll; overflow-y: hidden; clear: both; width: 100%; height: 250px; border-left: 3px solid #111; border-right: 3px solid #111;}
+#timeline div {overflow: hidden; width: 1450px; height: 250px; padding: 0 25px;}
+#timeline div ul.bars li {position: relative; z-index: 99;}
+#timeline div ul.bars li a {display: block; position: absolute; height: 35px; padding: 10px 15px; font: 16px/16px 'Slabo 13px', serif; color: #fff; background: #111; border-radius: 4px;}
+/*
+#timeline div ul.bars li a span {display: none;}
+#timeline div ul.bars li a:hover span, section#timeline div ul.bars li a:focus span {display: block; position: absolute; z-index: 99; padding: 18px; font: 13px/18px Helvetica, Arial, sans-serif; color: #111; background: #fff; -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,0.3); -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,0.3); box-shadow: 0 0 4px 2px rgba(0,0,0,0.3); border-radius: 4px;}
+*/
+#timeline div ul.years li {float: left; width: 99px; height: 250px; border-left: 1px dashed #111; font: 14px/17px Arial, Helvetica, sans-serif; text-align: center;}
+#timeline div ul.years li:first-of-type {border-left: none;}
+#timeline div ul.years li strong {display: inline-block; margin-top: 200px;}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media only screen and (max-width : 959px) {
+    figure, main, main p {width: 480px; margin: 0 auto;}
+    figure figcaption {margin-bottom: 100px; text-align: center;}
+    figure img {width: 480px; height: auto;}
+    footer, #projects-mobile-only {display: block; width: 60%; margin: 0 auto 50px; border-top: 3px solid #111;}
+    footer a, #projects-mobile-only ul li a {width: 100%; padding: 10px 0; border-right: none; border-bottom: 1px solid #ddd;}
+    footer p {float: none; clear: both; margin-top: 15px; text-align: center;}
+    header {margin-bottom: 30px;}
+    header h1, header h2 {float: none; width: 80%; margin: 0 auto 40px; padding: 0; text-align: center}
+    main a#home {display: block; margin: 0 auto; text-align: center;}
+    main h1 {margin: 50px 0 25px; font-size: 36px; line-height: 24px;}
+    #projects, #stories ul li a i, #timeline {display: none;}
+    #projects-mobile-only ul li a {display: block; width: 100%; text-align: center; color: #08a; font: 16px/26px 'Slabo 13px', serif;}
+    #projects-mobile-only ul li:hover a, #projects-mobile-only ul li:focus a, #projects-mobile-only ul li a:hover, #projects-mobile-only ul li a:focus {border-bottom: 1px solid rgba(0, 136, 170, 0.5);}
+    #stories {width: 480px; margin: 0 auto 100px; font-size: 14px; line-height: 24px;}
+    #stories ul li a span {float: none; width: 100%;}
+    #wrapper {width: 100%;}
+}
+
+@media only screen and (max-width: 480px) {
+    header {margin: 0; padding: 40px 0 20px; border-radius: 0;}
+    header h1 {font-size: 36px; line-height: 42px;}
+    header h2 {padding: 0 25px;}
+    figure, figure img, footer, main, main p, #projects-mobile-only, section#stories {width: 100%;}
+    figure figcaption, main h1, main p {padding-left: 20px; padding-right: 20px;}
+    #stories ul li {padding-left: 20px; padding-right: 20px;}
+}

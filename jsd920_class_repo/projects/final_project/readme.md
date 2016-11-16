@@ -1,34 +1,93 @@
-# Project Overview
+# PROJECT OVERVIEW
 
-## Project Description
+The Financial Impact of Storms in the Each U.S. State (by month and year)
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality
+_____________________
 
-## Functionl Components
+# PROJECT DESCRIPTION
 
-This is a breakdown of the top level functionality for final project
+The NOAA's National Centers for Environmental Information (NCEI) is "responsible for hosting and providing access to one of the most significant archives on Earth, with comprehensive oceanic, atmospheric, and geophysical data." They release monthly storm data publications (http://www.ncdc.noaa.gov/IPS/sd/sd.html) of the financial damage done to property and crops by storms, per state.
 
-* Functional component 1
-* Functional component 2
-* Functional component 3
+I'm interested in making a data visualization dashboard/app allowing a user to see the financial impact each storm has had on each state's property, segmented by month and year. The NCEI provides the data in PDFs; therefore I'll need to create a JSON file. Using D3.js, the data will be presented as bar charts, line graphs and a choropleth map.
 
-## Helper Functions
+__________________________________
+
+# HIGH-LEVEL FUNCTIONAL COMPONENTS
+
+* Creating a new JSON file with the following: an array of years, each with an array of months, each with state objects, each with a property damage value and a storm type value.
+
+* Stacked bar chart showing storm types from [#] year to [#] year in [state name]. The [#] year inputs will be a dropdown; the [state name] field will be a dropdown. The chart will be made using D3.js. X-axis is the year; y-axis is the $ cost. When you click on/slide through one or more years, the monthly storm breakdown for the selected years will reveal below. X-axis is the month; y-axis is the $ cost.
+
+* The mobile experience of the stacked bar chart will be a two-column table instead. The first column will show the storm types; the second will show the % change in $ cost per corresponding storm (the % will change based on the range of years chosen). When you click on a row, it will expand to to reveal a monthly breakdown of the $ cost as a line chart.
+
+* Density (choropleth) map of which state was hit with the most cost in [#] year. The [#] year input will be a dropdown. The map will be made using D3.js. This would quickly answer the question, "Which state would be the costliest to live in?" Each map would have a different shade/opacity based on the estimated $ cost per capita (dividing the total cost of a state by its current population). When you click/tap on a state, a tooltip will show more details (TBD).
+
+* The mobile experience for the density (choropleth) map is TBD.
+
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Create a JSON file using data listed from a PDF. | H | 4+hrs| 4hrs |  |
+| Use D3.js to grab data and output bar charts, line graphs, and one custom-designed choropleth map. | H | 24hrs| 0 |  |
+
+_______________________________
+
+# LOW-LEVEL FUNCTION COMPONENTS
+
+* Bar chart showing a summary of the total costs of all storm types per year thus far. The chart will be made using D3.js. X-axis is the year; y-axis is the $ cost.
+* Bar chart showing a summary of the most costly storm types thus bar, ordered by most to least costliest. The chart will be made using D3.js. X-axis is the $ cost; y-axis is the storms.
+* Stacked bar chart showing a summary of storm types per state thus far. The chart will be made using D3.js. X-axis is the $ cost; y-axis is the states.
+
+* The mobile experience of the bar charts will be a two-column table instead. The first column will show either the storm type or year, depending on the summary; the second will show the $ cost.
+
+__________________
+
+# HELPER FUNCTIONS
+
 Use this section to document all helper functions. These functions should be versatile enough to be reused in other projects
 
-## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project
+______________________
 
-## JSON Data Keys
- Use this section to list specific JSON Data Key mappings.  
+# ADDITIONAL LIBRARIES
 
-## jQuery Functional Requirements
- Use this section to list some, but not all, of the jQuery methods discovered while working on this project.
+Use this section to list all supporting libraries and their role in the project
 
-## Change Log
- Use this section to document what changes were made and when.
+________________
 
-## Issues and Resolutions
- Use this section to list of all issues encountered and their resolution
+# JSON DATA KEYS
+
+[
+	{
+		"yearArray": [
+			{
+				"monthObject": {
+					"stateArray": [
+						{"storm": "stormTypeName", "damage": "damageCostNumber"}
+					]
+				}
+			}
+		]
+	}
+]
+
+The JSON needs to account for multiple years, months, states, and storm/damage objects per state.
+
+________________________________
+
+# JQUERY FUNCTIONAL REQUIREMENTS
+
+Use this section to list some, but not all, of the jQuery methods discovered while working on this project.
+
+____________
+
+# CHANGE LOG
+
+Use this section to document what changes were made and when.
+
+________________________
+
+# ISSUES AND RESOLUTIONS
+
+Use this section to list of all issues encountered and their resolution
 
 #### SAMPLE.....
 **ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                

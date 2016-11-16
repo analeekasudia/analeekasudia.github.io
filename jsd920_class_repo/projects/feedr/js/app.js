@@ -1,3 +1,8 @@
+// Sort by date
+// Filter by pub
+// Make search work
+// Make popup/other summary
+
 function diggToArticle(diggArticle) {
 	var tagNames = diggArticle.content.tags.map(function(tag) {
 		return tag.display
@@ -6,6 +11,7 @@ function diggToArticle(diggArticle) {
 	article['headline'] = diggArticle.content.title_alt;
 	article['img'] = diggArticle.content.media.images[3].url;
 	article['score'] = diggArticle.diggs.count;
+	article['summary'] = diggArticle.content.description;
 	article['tag'] = tagNames.join(", ");
 	article['url'] = diggArticle.content.original_url;
 	return article;
@@ -15,8 +21,9 @@ function mashableToArticle(mashableArticle) {
 	var article = {}
 	article['headline'] = mashableArticle.title;
 	article['img'] = mashableArticle.responsive_images[3].image;
-	article['score'] = mashableArticle.shares.total
-	article['tag'] = mashableArticle.channel_label
+	article['score'] = mashableArticle.shares.total;
+	article['summary'] = mashableArticle.content.plain;
+	article['tag'] = mashableArticle.channel_label;
 	article['url'] = mashableArticle.link;
 	return article;
 }
@@ -26,6 +33,7 @@ function redditToArticle(redditArticle) {
 	article['headline'] = redditArticle.data.title;
 	article['img'] = redditArticle.data.thumbnail;
 	article['score'] = redditArticle.data.score;
+	// article['summary'] = ; -- where is it??
 	article['tag'] = redditArticle.data.subreddit
 	article['url'] = redditArticle.data.url;
 	return article;
@@ -73,5 +81,3 @@ $(document).ready(function () {
 
 // var mashableUrl = 'https://newsapi.org/v1/articles?source=mashable&sortBy=top&apiKey=' + apiKey;
 // var apiKey = '43b1af648f3248eba540ad8a38319837';
-
-
