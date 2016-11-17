@@ -20,7 +20,8 @@ $(document).ready(function () {
     cityNameSpan.innerHTML = city;
   }
 
-  getWeatherForCity('New York');
+  getWeatherForCity('New York, New York');
+
   $('#city-form').submit(function(event){
     event.preventDefault();
     var input = $('#city-input')
@@ -40,6 +41,30 @@ $(document).ready(function () {
     console.log(red, blue);
     return "rgb(" + red + ", 0, " + blue + ")"
   }
+
+  function getWeatherForCityInSpan(cityName, cityWeatherSpan) {
+    var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&APPID=0eadf9a9141e80aed512ae6360edf643";
+    $.get(weatherUrl, function(response) {
+      var outputTemp = Math.ceil(response.main.temp);
+      cityWeatherSpan.innerHTML = outputTemp;
+    })
+  }
+
+  function getWeatherForAllCities() {
+    var citiesContainer = document.getElementById('cities');
+    var cities = citiesContainer.children; // grab all the children, the <li>, within #cities 'ul'
+    var i;
+    for (i = 0; i < cities.length; i++) { // looping through all cities
+      var cityLi = cities[i]; // saving one city in the 'cityLi' var
+      var cityKids = cityLi.children;
+      var cityNameSpan = cityKids[0]; // city name is in first span
+      var cityWeatherSpan = cityKids[1]; // city weather is in second span
+      var cityName = cityNameSpan.innerHTML;
+      getWeatherForCityInSpan(cityName, cityWeatherSpan);
+    }
+  }
+
+  getWeatherForAllCities();
 
 });
 

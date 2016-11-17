@@ -1,32 +1,8 @@
-/*
-	CATEGORY REFERENCE
-
-	Avalanche
-	Cold Wind/Chill (Cold Wind/Chill, Extreme Cold Wind/Chill)
-	Drought -- crop damage only?
-	Dust Storm
-	Flood (Coastal Flood, Debris Flow, Flash Flood, Flood, High Surf)
-	Fog/Smoke (Dense Smoke, Dense Fog, Freezing Fog)
-	Frost/Freeze
-	Hail/Ice (Hail, Ice Storm, Sleet)
-	Rain
-	Hurricane
-	Lightning (Lightning, Marine Lightning)
-	Snow/Blizzard (Blizzard, Heavy Snow, Lake-Effect Snow)
-	Strong Wind (High Wind, Marine High Wind, Strong Wind, Marine Strong Wind)
-	Thunderstorm Wind (Thunderstorm Wind, Marine Thunderstorm Wind)
-	Tornado
-	Wildfire
-	Winter Storm/Weather (Winter Weather, Winter Storm)
-*/
-
 [
 
-	// begin 2015
 	{
 		"2015": [
 
-			// begin FEBRUARY
 			{
 				"February": {
 					"Alabama": [
@@ -193,7 +169,6 @@
 				}
 			},
 
-			// begin JANUARY
 			{
 				"January": {
 					"Alabama": [
@@ -201,7 +176,7 @@
 						{ "storm": "Tornado", "damage": 215000 }
 					],
 					"Alaska": [
-						{ "storm": "Strong Wind", "damage": 61000 },
+						{ "storm": "Strong Wind", "damage": 61000 }
 					],
 					"Arizona": [
 						{ "storm": "Fog/Smoke", "damage": 50000 },
@@ -341,11 +316,9 @@
 		]
 	},
 
-	// begin 2014
 	{
 		"2014": [
 
-			// begin DECEMBER
 			{
 				"December": {
 					"Alabama": [

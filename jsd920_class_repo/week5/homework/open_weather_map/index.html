@@ -11,31 +11,32 @@
 		<h1>Current Weather in <span id="city-name"></span></h1>
 		<div id="nyc-weather"></div>
 		<form id="city-form">
-			<label for="city-input">Enter another city name to view its weather:</label>
-			<input type="text" name="city" id="city-input" tabindex="1"  />
+			<label for="city-input">Enter another city and state, separated by comma, to view its weather:</label>
+			<input type="text" name="city" id="city-input" onfocus="if(this.value == 'City, State') { this.value = ''; }" value="City, State" tabindex="1"  />
 			<input type="submit" value="Get Weather" tabindex="2" />
 		</form>
-		<ul>
-			<li>Austin, Texas</li>
-			<li>Charlotte, North Carolina</li>
-			<li>Chicago, Illinois</li>
-			<li>Columbus, Ohio</li>
-			<li>Dallas, Texas</li>
-			<li>Denver, Colorado</li>
-			<li>El Paso, Texas</li>
-			<li>Forth Worth, Texas</li>
-			<li>Houston, Texas</li>
-			<li>Indianapolis, Indiana</li>
-			<li>Jacksonville, Florida</li>
-			<li>Los Angeles, California</li>
-			<li>Philadelphia, Pennsylvania</li>
-			<li>Phoenix, Arizona</li>
-			<li>New York, New York</li>
-			<li>San Antonio, Texas</li>
-			<li>San Diego, California</li>
-			<li>San Francisco, California</li>
-			<li>San Jose, California</li>
-			<li>Seattle, Washington</li>
+		<h2>Current Temp. for the <a href="https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population">Top 20 Cities</a></h2>
+		<ul id="cities">
+			<li><span>Austin, Texas</span> <span></span></li>
+			<li><span>Charlotte, North Carolina</span> <span></span></li>
+			<li><span>Chicago, Illinois</span> <span></span></li>
+			<li><span>Columbus, Ohio</span> <span></span></li>
+			<li><span>Dallas, Texas</span> <span></span></li>
+			<li><span>Denver, Colorado</span> <span></span></li>
+			<li><span>El Paso, Texas</span> <span></span></li>
+			<li><span>Forth Worth, Texas</span> <span></span></li>
+			<li><span>Houston, Texas</span> <span></span></li>
+			<li><span>Indianapolis, Indiana</span> <span></span></li>
+			<li><span>Jacksonville, Florida</span> <span></span></li>
+			<li><span>Los Angeles, California</span> <span></span></li>
+			<li><span>Philadelphia, Pennsylvania</span> <span></span></li>
+			<li><span>Phoenix, Arizona</span> <span></span></li>
+			<li><span>New York, New York</span> <span></span></li>
+			<li><span>San Antonio, Texas</span> <span></span></li>
+			<li><span>San Diego, California</span> <span></span></li>
+			<li><span>San Francisco, California</span> <span></span></li>
+			<li><span>San Jose, California</span> <span></span></li>
+			<li><span>Seattle, Washington</span> <span></span></li>
 		</ul>
 	</main>
 	<footer>A <a href="https://generalassemb.ly/">General Assembly</a> project by <a href="http://rozeznmetal.com/">Analee Kasudia</a> using the <a href="http://openweathermap.org/current">Open Weather Map API</a>.</footer>

@@ -39,7 +39,7 @@ var stormData = [
 						{ "storm": "Frost/Freeze", "damage": 1000000 }
 					],
 					"Arkansas": [
-						{ "storm": "Ice", "damage": 1050000 },
+						{ "storm": "Hail/Ice", "damage": 1050000 },
 						{ "storm": "Strong Wind", "damage": 501000 },
 						{ "storm": "Winter Storm/Weather", "damage": 1140000 }
 					],
@@ -63,7 +63,7 @@ var stormData = [
 						{ "storm": "Tornado", "damage": 13000 }
 					],
 					"Georgia": [
-						{ "storm": "Ice Storm", "damage": 15000 }
+						{ "storm": "Hail/Ice", "damage": 15000 }
 					],
 					"Hawaii": [
 						{ "storm": "Strong Wind", "damage": 97000 }
@@ -277,7 +277,7 @@ var stormData = [
 					],
 					"Nebraska": [],
 					"Nevada": [
-						{ "storm": "Heavy Rain", "damage": 650000 }
+						{ "storm": "Rain", "damage": 650000 }
 					],
 					"New Hampshire": [
 						{ "storm": "Flood", "damage": 30000 }
@@ -361,9 +361,8 @@ var stormData = [
 						{ "storm": "Thunderstorm Wind", "damage": 76000 }
 					],
 					"California": [
-						{ "storm": "Flood", "damage": 2300000 },
+						{ "storm": "Flood", "damage": 13123500 },
 						{ "storm": "Fog/Smoke", "damage": 200000 },
-						{ "storm": "Flood", "damage": 10823500 },
 						{ "storm": "Rain", "damage": 26000 },
 						{ "storm": "Snow/Blizzard", "damage": 44000 },
 						{ "storm": "Strong Wind", "damage": 5894600 },
@@ -489,7 +488,7 @@ var stormData = [
 					],
 					"West Virginia": [
 						{ "storm": "Flood", "damage": 2000 },
-						{ "storm": "Heavy Rain", "damage": 30000 },
+						{ "storm": "Rain", "damage": 30000 },
 						{ "storm": "Strong Wind", "damage": 2000 },
 						{ "storm": "Thunderstorm Wind", "damage": 21000 }
 					],

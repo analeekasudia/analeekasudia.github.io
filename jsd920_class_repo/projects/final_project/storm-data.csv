@@ -1,0 +1,241 @@
+Year,Month,State,Storm Type,Property Damage
+2015,February,Alabama,Strong Wind,"$3,000"
+2015,February,Alaska,Strong Wind,"$150,000"
+2015,February,Arizona,Frost/Freeze,"$1,000,000"
+2015,February,Arkansas,Ice,"$1,050,000"
+2015,February,Arkansas,Strong Wind,"$501,000"
+2015,February,Arkansas,Winter Storm/Weather,"$1,140,000"
+2015,February,California,Flood,"$10,000"
+2015,February,California,Rain,"$25,000"
+2015,February,California,Strong Wind,"$74,800"
+2015,February,Colorado,Avalanche,$500
+2015,February,Connecticut,Strong Wind,"$110,000"
+2015,February,Delaware,Strong Wind,"$116,000"
+2015,February,Florida,Flood,"$108,000"
+2015,February,Florida,Thunderstorm Wind,"$96,000"
+2015,February,Florida,Tornado,"$13,000"
+2015,February,Georgia,Hail/Ice,"$15,000"
+2015,February,Hawaii,Strong Wind,"$97,000"
+2015,February,Idaho,Flood,"$40,000"
+2015,February,Illinois,Cold Wind/Chill,"$8,000"
+2015,February,Illinois,Winter Storm/Weather,"$450,000"
+2015,February,Indiana,Winter Storm/Weather,"$110,000"
+2015,February,Iowa,Winter Storm/Weather,"$2,725,000"
+2015,February,Kansas,null,$0
+2015,February,Kentucky,Cold Wind/Chill,"$310,000"
+2015,February,Kentucky,Flood,"$12,000"
+2015,February,Kentucky,Winter Storm/Weather,"$28,000"
+2015,February,Louisiana,Hail/Ice,"$30,000"
+2015,February,Louisiana,Thunderstorm Wind,"$7,000"
+2015,February,Louisiana,Winter Storm/Weather,"$6,000"
+2015,February,Maine,Flood,"$5,000"
+2015,February,Maryland,Cold Wind/Chill,"$100,000"
+2015,February,Maryland,Strong Wind,"$70,000"
+2015,February,Massachusetts,Snow/Blizzard,"$10,000"
+2015,February,Michigan,Winter Storm/Weather,"$15,000"
+2015,February,Minnesota,Winter Storm/Weather,"$4,000"
+2015,February,Mississippi,Hail/Ice,"$1,000"
+2015,February,Mississippi,Strong Wind,"$10,500"
+2015,February,Mississippi,Thunderstorm Wind,"$87,250"
+2015,February,Mississippi,Tornado,"$27,238,200"
+2015,February,Mississippi,Winter Storm/Weather,"$58,000"
+2015,February,Missouri,Winter Storm/Weather,"$204,000"
+2015,February,Montana,null,$0
+2015,February,Nebraska,null,$0
+2015,February,Nevada,null,$0
+2015,February,New Hampshire,Flood,"$10,000"
+2015,February,New Jersey,Cold Wind/Chill,"$250,000"
+2015,February,New Jersey,Strong Wind,"$353,000"
+2015,February,New Mexico,Wildfire,"$6,000"
+2015,February,New York,Lake-Effect Snow,"$265,000"
+2015,February,New York,Strong Wind,"$170,000"
+2015,February,New York,Thunderstorm Wind,"$61,000"
+2015,February,New York,Winter Storm/Weather,"$1,185,000"
+2015,February,North Carolina,Strong Wind,"$27,600"
+2015,February,North Carolina,Winter Storm/Weather,"$9,500,000"
+2015,February,North Dakota,null,$0
+2015,February,Ohio,Cold Wind/Chill,"$100,000"
+2015,February,Ohio,Winter Storm/Weather,"$5,050,000"
+2015,February,Oklahoma,null,$0
+2015,February,Oregon,null,$0
+2015,February,Pennsylvania,Cold Wind/Chill,"$250,000"
+2015,February,Pennsylvania,Strong Wind,"$449,000"
+2015,February,Pennsylvania,Winter Storm/Weather,"$600,000"
+2015,February,Rhode Island,null,$0
+2015,February,South Carolina,Hail/Ice,"$55,000"
+2015,February,South Carolina,Strong Wind,"$100,000"
+2015,February,South Carolina,Winter Storm/Weather,"$5,000"
+2015,February,South Dakota,null,$0
+2015,February,Tennessee,Winter Storm/Weather,"$64,805,000"
+2015,February,Texas,Snow/Blizzard,"$270,000"
+2015,February,Texas,Winter Storm/Weather,"$687,000"
+2015,February,Utah,Winter Storm/Weather,"$20,000"
+2015,February,Vermont,Winter Storm/Weather,"$275,000"
+2015,February,Virginia,Strong Wind,"$120,000"
+2015,February,Virginia,Winter Storm/Weather,"$45,000"
+2015,February,Washington,Flood,"$754,000"
+2015,February,West Virginia,Cold Wind/Chill,"$450,000"
+2015,February,West Virginia,Flood,"$20,000"
+2015,February,West Virginia,Snow/Blizzard,"$570,000"
+2015,February,West Virginia,Winter Storm/Weather,"$350,000"
+2015,February,Wisconsin,Strong Wind,"$55,000"
+2015,February,Wyoming,null,$0
+2015,January,Alabama,Thunderstorm Wind,"$5,500"
+2015,January,Alabama,Tornado,"$215,000"
+2015,January,Alaska,Strong Wind,"$61,000"
+2015,January,Arizona,Fog/Smoke,"$50,000"
+2015,January,Arizona,Frost/Freeze,"$1,060,000"
+2015,January,Arkansas,Flood,"$30,000"
+2015,January,California,Fog/Smoke,"$100,000"
+2015,January,California,Flood,"$25,000"
+2015,January,California,Frost/Freeze,"$300,000"
+2015,January,California,Rain,"$50,000"
+2015,January,Colorado,null,$0
+2015,January,Connecticut,null,$0
+2015,January,Delaware,Strong Wind,"$18,000"
+2015,January,Florida,Thunderstorm Wind,"$15,000"
+2015,January,Florida,Tornado,"$30,000"
+2015,January,Georgia,Flood,"$18,000"
+2015,January,Georgia,Strong Wind,"$6,500"
+2015,January,Georgia,Thunderstorm Wind,"$62,000"
+2015,January,Georgia,Tornado,"$41,000"
+2015,January,Hawaii,null,$0
+2015,January,Idaho,Snow/Blizzard,"$8,000"
+2015,January,Idaho,Fog/Smoke,"$10,000"
+2015,January,Illinois,null,$0
+2015,January,Indiana,Flood,"$20,000"
+2015,January,Indiana,Hail/Ice,"$15,000"
+2015,January,Iowa,null,$0
+2015,January,Kansas,null,$0
+2015,January,Kentucky,null,$0
+2015,January,Louisiana,Thunderstorm Wind,"$53,000"
+2015,January,Maine,Flood,"$5,000"
+2015,January,Maryland,Strong Wind,"$5,000"
+2015,January,Massachusetts,Flood,"$2,350,000"
+2015,January,Massachusetts,Strong Wind,"$209,000"
+2015,January,Massachusetts,Winter Storm/Weather,"$220,000"
+2015,January,Michigan,null,$0
+2015,January,Minnesota,null,$0
+2015,January,Mississippi,Flood,"$57,000"
+2015,January,Mississippi,Lightning,"$20,000"
+2015,January,Mississippi,Strong Wind,$100
+2015,January,Mississippi,Thunderstorm Wind,"$55,000"
+2015,January,Mississippi,Tornado,"$670,000"
+2015,January,Missouri,Flood,"$3,000"
+2015,January,Missouri,Winter Storm/Weather,"$10,000"
+2015,January,Montana,Snow/Blizzard,"$7,000"
+2015,January,Montana,Winter Storm/Weather,"$1,000"
+2015,January,Nebraska,null,$0
+2015,January,Nevada,Rain,"$650,000"
+2015,January,New Hampshire,Flood,"$30,000"
+2015,January,New Jersey,Strong Wind,"$73,000"
+2015,January,New Jersey,Thunderstorm Wind,"$50,000"
+2015,January,New Mexico,null,$0
+2015,January,New York,Snow/Blizzard,"$140,000"
+2015,January,New York,Strong Wind,"$195,000"
+2015,January,New York,Thunderstorm Wind,"$3,000"
+2015,January,New York,Winter Storm/Weather,"$40,000"
+2015,January,North Carolina,Winter Storm/Weather,"$70,000"
+2015,January,North Dakota,null,$0
+2015,January,Oklahoma,null,$0
+2015,January,Oregon,null,$0
+2015,January,Pennsylvania,Snow/Blizzard,"$150,000"
+2015,January,Pennsylvania,Strong Wind,"$5,000"
+2015,January,Rhode Island,Snow/Blizzard,"$50,000"
+2015,January,South Carolina,Strong Wind,"$26,500"
+2015,January,South Carolina,Thunderstorm Wind,"$16,000"
+2015,January,South Dakota,Winter Storm/Weather,"$125,000"
+2015,January,Tennessee,null,$0
+2015,January,Texas,Flood,"$6,000"
+2015,January,Texas,Wildfire,"$100,000"
+2015,January,Texas,Winter Storm/Weather,"$55,000"
+2015,January,Utah,null,$0
+2015,January,Vermont,Winter Storm/Weather,"$570,000"
+2015,January,Virginia,Strong Wind,"$2,000"
+2015,January,Washington,Flood,"$300,000"
+2015,January,Washington,Strong Wind,"$50,000"
+2015,January,West Virginia,Winter Storm/Weather,"$25,000"
+2015,January,Wisconsin,null,$0
+2015,January,Wyoming,null,$0
+2014,December,Alabama,Flood,"$5,000"
+2014,December,Alabama,Thunderstorm Wind,"$17,000"
+2014,December,Alaska,null,$0
+2014,December,Arizona,Snow/Blizzard,"$500,000"
+2014,December,Arizona,Winter Storm/Weather,"$25,000"
+2014,December,Arkansas,Thunderstorm Wind,"$76,000"
+2014,December,California,Flood,"$13,123,500"
+2014,December,California,Fog/Smoke,"$200,000"
+2014,December,California,Rain,"$26,000"
+2014,December,California,Snow/Blizzard,"$44,000"
+2014,December,California,Strong Wind,"$5,894,600"
+2014,December,California,Winter Storm/Weather,"$25,000"
+2014,December,Colorado,null,$0
+2014,December,Connecticut,Strong Wind,"$30,000"
+2014,December,Delaware,Strong Wind,"$10,000"
+2014,December,Florida,Flood,"$101,000"
+2014,December,Florida,Lightning,"$1,000"
+2014,December,Florida,Thunderstorm Wind,"$13,000"
+2014,December,Georgia,Flood,"$40,000"
+2014,December,Georgia,Thunderstorm Wind,"$64,000"
+2014,December,Georgia,Tornado,"$750,000"
+2014,December,Hawaii,Strong Wind,"$10,000"
+2014,December,Idaho,Winter Storm/Weather,"$23,000"
+2014,December,Illinois,null,$0
+2014,December,Indiana,Flood,"$5,000"
+2014,December,Iowa,null,$0
+2014,December,Kansas,Winter Storm/Weather,"$5,000"
+2014,December,Kentucky,Strong Wind,"$15,000"
+2014,December,Louisiana,Hail/Ice,"$30,000"
+2014,December,Louisiana,Thunderstorm Wind,"$4,000"
+2014,December,Louisiana,Tornado,"$400,000"
+2014,December,Maine,null,$0
+2014,December,Maryland,null,$0
+2014,December,Massachusetts,Flood,"$85,000"
+2014,December,Massachusetts,Strong Wind,"$41,000"
+2014,December,Michigan,null,$0
+2014,December,Minnesota,Fog/Smoke,"$5,000"
+2014,December,Mississippi,Hail/Ice,"$1,000"
+2014,December,Mississippi,Thunderstorm Wind,"$42,200"
+2014,December,Mississippi,Tornado,"$27,250,500"
+2014,December,Missouri,null,$0
+2014,December,Montana,Snow/Blizzard,"$15,000"
+2014,December,Nebraska,null,$0
+2014,December,Nevada,Rain,"$100,000"
+2014,December,Nevada,Strong Wind,"$581,000"
+2014,December,Nevada,Winter Storm/Weather,"$20,000"
+2014,December,New Hampshire,null,$0
+2014,December,New Jersey,Fog/Smoke,"$1,000,000"
+2014,December,New Jersey,Strong Wind,"$28,000"
+2014,December,New Mexico,null,$0
+2014,December,New York,Fog/Smoke,"$2,000,000"
+2014,December,New York,Snow/Blizzard,"$185,000"
+2014,December,New York,Strong Wind,"$260,000"
+2014,December,New York,Thunderstorm Wind,"$60,000"
+2014,December,New York,Winter Storm/Weather,"$600,000"
+2014,December,North Carolina,Flood,"$10,000"
+2014,December,North Carolina,Tornado,"$60,000"
+2014,December,North Dakota,null,$0
+2014,December,Ohio,Strong Wind,"$19,000"
+2014,December,Ohio,Thunderstorm Wind,"$50,000"
+2014,December,Ohio,Tornado,"$15,000"
+2014,December,Oklahoma,Thunderstorm Wind,"$26,000"
+2014,December,Oregon,Strong Wind,"$313,000"
+2014,December,Pennsylvania,Strong Wind,"$40,000"
+2014,December,Pennsylvania,Thunderstorm Wind,"$35,000"
+2014,December,Pennsylvania,Winter Storm/Weather,"$200,000"
+2014,December,Rhode Island,null,$0
+2014,December,South Carolina,null,$0
+2014,December,South Dakota,null,$0
+2014,December,Tennessee,Thunderstorm Wind,"$5,000"
+2014,December,Texas,Tornado,"$10,000"
+2014,December,Texas,Thunderstorm Wind,"$15,000"
+2014,December,Utah,Strong Wind,"$105,000"
+2014,December,Vermont,Winter Storm/Weather,"$1,845,000"
+2014,December,Virginia,null,$0
+2014,December,Washington,Strong Wind,"$4,500,000"
+2014,December,West Virginia,Flood,"$2,000"
+2014,December,West Virginia,Rain,"$30,000"
+2014,December,West Virginia,Strong Wind,"$2,000"
+2014,December,West Virginia,Thunderstorm Wind,"$21,000"
+2014,December,Wisconsin,Flood,"$15,000"
+2014,December,Wyoming,null,$0

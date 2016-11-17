@@ -1,21 +1,29 @@
 * {margin: 0; padding: 0; list-style: none; text-decoration: none; font-family: 'Varela Round', sans-serif;}
 
-#city-form {text-align: center;}
+#city-form {margin-bottom: 60px; text-align: center;}
+#city-form input[onfocus] {color: #555;}
 #city-form input[type='submit'] {display: block; width: auto; margin: 10px auto;}
 #city-form input[type='text'] {width: 244px; padding: 6px; font-size: 18px; text-align: center; border: none;}
 #city-form label {clear: both; display: block; padding: 30px 0 20px; font-size: 14px; font-weight: normal; text-align: center; border-top: 1px solid #000; color: #f0f0f0;}
 
-footer {text-align: center; font-size: 11px; line-height: 18px; color: rgba(0,0,0,0.3);}
+footer {margin-bottom: 20px; text-align: center; font-size: 11px; line-height: 18px; color: rgba(0,0,0,0.3);}
 footer a {color: rgba(0,0,0,0.55);}
 footer a:hover {text-decoration: underline;}
 
 main {width: 520px; margin: 40px auto 60px; padding: 40px; background: rgba(0,0,0,0.55);}
 main h1 {padding-bottom: 20px; color: #f0f0f0; text-align: center; font-size: 18px; text-transform: uppercase; border-bottom: 1px solid #000;}
-main h1 span {display: block; margin-top: 9px; font-size: 54px; line-height: 54px}
+main h1 span {display: block; margin-top: 9px; font-size: 36px; line-height: 36px}
 
 #nyc-weather p {float: left; width: 33%; padding: 20px 0; font-size: 18px; text-align: center; border-right: 1px solid #000; color: #f0f0f0;}
 #nyc-weather p:last-child {border-right: none;}
 #nyc-weather p strong {display: block; font-size: 54px;}
+
+h2 {padding: 20px 0; font-size: 18px; color: #f0f0f0; text-align: center; border-top: 1px solid #000;}
+h2 a {color: #f0f0f0; text-decoration: underline;}
+ul {margin: 0 100px; padding-bottom: 20px; color: #f0f0f0;}
+ul li {padding: 10px 20px; font-size: 14px; border-top: 1px solid #000;}
+ul li:hover {background: #000;}
+ul li span:last-child {float: right;}
 
 @media only screen and (max-width: 480px) {
 	main {width: 85%; margin: 20px 0 40px;}

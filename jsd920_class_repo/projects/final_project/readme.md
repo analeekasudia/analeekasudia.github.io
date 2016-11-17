@@ -71,6 +71,26 @@ ________________
 
 The JSON needs to account for multiple years, months, states, and storm/damage objects per state.
 
+The NOAA has the segmented storm data in PDFs, which need to be extracted (read: manually typed) to create the JSON file. There are many storm 'types'; so I've grouped them to reduce the number of categories and labels:
+
+* Avalanche
+* Cold Wind/Chill (Cold Wind/Chill, Extreme Cold Wind/Chill)
+* Drought -- crop damage only?
+* Dust Storm
+* Flood (Coastal Flood, Debris Flow, Flash Flood, Flood, High Surf)
+* Fog/Smoke (Dense Smoke, Dense Fog, Freezing Fog)
+* Frost/Freeze
+* Hail/Ice (Hail, Ice Storm, Sleet)
+* Rain
+* Hurricane
+* Lightning (Lightning, Marine Lightning)
+* Snow/Blizzard (Blizzard, Heavy Snow, Lake-Effect Snow)
+* Strong Wind (High Wind, Marine High Wind, Strong Wind, Marine Strong Wind)
+* Thunderstorm Wind (Thunderstorm Wind, Marine Thunderstorm Wind)
+* Tornado
+* Wildfire
+* Winter Storm/Weather (Winter Weather, Winter Storm)
+
 ________________________________
 
 # JQUERY FUNCTIONAL REQUIREMENTS
@@ -87,8 +107,10 @@ ________________________
 
 # ISSUES AND RESOLUTIONS
 
-Use this section to list of all issues encountered and their resolution
+**ERROR: XMLHttpRequest cannot load
+**RESOLUTION: Had to run a local server; used Firebase and put my files in my /public folder for testing.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR: (Multiple errors in custom JSON file)
+**RESOLUTION: I had either one too many or not enough brackets.
+
+**ERROR: x-axis, y-axis, and key/legend render - but not the chart. and there are no logged errors.
