@@ -1,5 +1,19 @@
+/*
 * {margin: 0; padding: 0; list-style: none; text-decoration: none;}
 a {cursor: pointer;}
 
 .axis path {display: none;}
 .bar {fill: steelblue;}
+*/
+
+.bar {
+  fill: gray;
+}
+
+.bar:hover {
+  fill: black;
+}
+
+.axis--x path {
+  display: none;
+}

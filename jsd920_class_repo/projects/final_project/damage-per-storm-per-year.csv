@@ -1,2 +1,3 @@
-Year,Avalanche,Cold Wind/Chill,Dust Storm,Flood,Fog/Smoke,Frost/Freeze,Hail/Ice,Rain,Hurricane,Lightning,Snow/Blizzard,Strong Wind,Thunderstorm Wind,Tornado,Wildfire,Winter Storm/Weather
-2015,500,1468000,,957000,50000,1000000,1151000,25000,,,1115000,2656900,275250,27251200,6000,87262000
+Year,Avalanche,ColdWindChill,DustStorm,Flood,FogSmoke,FrostFreeze,HailIce,Rain,Hurricane,Lightning,SnowBlizzard,StrongWind,ThunderstormWind,Tornado,Wildfire,WinterStormWeather,TotalDamage
+2015,500,1468000,0,957000,50000,1000000,1151000,25000,0,0,1115000,2656900,275250,27251200,6000,87262000,123217850
+2014,0,0,0,13359500,205000,0,31000,26000,0,1000,544000,6000600,216200,28400500,0,78000,739274910

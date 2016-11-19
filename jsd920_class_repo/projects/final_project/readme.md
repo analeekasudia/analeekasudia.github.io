@@ -77,7 +77,7 @@ The NOAA has the segmented storm data in PDFs, which need to be extracted (read:
 * Cold Wind/Chill (Cold Wind/Chill, Extreme Cold Wind/Chill)
 * Drought -- crop damage only?
 * Dust Storm
-* Flood (Coastal Flood, Debris Flow, Flash Flood, Flood, High Surf)
+* Flood (Coastal Flood, Debris Flow, Flash Flood, Flood, High Surf, Lakeshore Flood)
 * Fog/Smoke (Dense Smoke, Dense Fog, Freezing Fog)
 * Frost/Freeze
 * Hail/Ice (Hail, Ice Storm, Sleet)
