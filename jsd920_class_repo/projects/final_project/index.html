@@ -7,147 +7,219 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Storm Data</title>
   <link rel="stylesheet" type="text/css" media="all" href="main.css">
-  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Slabo+13px" rel="stylesheet">
 </head>
 <body>
 
   <header>
     <h1>The Financial Impact of Storms in the U.S.</h1>
+    <a href="http://www.ncdc.noaa.gov/IPS/sd/sd.html">NOAA Storm Events Database</a>
   </header>
 
-  <svg width="960" height="600"></svg>
+  <main>
+    <h2>Property Damage from Storms per Year </h2>
+    <p>In USD($) from 1996-2016. Click on a bar for more details.</p>
+    <svg id="bar-chart" width="960" height="620"></svg>
+  </main>
+
+  <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
   <script type="text/javascript">
 
-  // DashingD3
-  // chart needs to be wrapped in function
-  // d3.csv("filename.csv", error, data).createChart();
-  // sort/filter data, then put "back/on" to .createChart; it'll run through .createChart and reload
-
-  // BAR CHART
-  var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = +svg.attr("width") - margin.left - margin.right,
-    height = +svg.attr("height") - margin.top - margin.bottom;
-
-  var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-    y = d3.scaleLinear().rangeRound([height, 0]);
-
-  console.log(y); // test
-
-  var g = svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-d3.csv("damage-per-storm-per-year.csv", function(d) {
-  d.TotalDamage = +d.TotalDamage;
-  return d;
-}, function(error, data) {
-  if (error) throw error;
-
-  x.domain(data.map(function(d) { return d.Year; }));
-  y.domain([0, d3.max(data, function(d) { return d.TotalDamage; })]);
-
-  g.append("g")
-      .attr("class", "axis axis--x")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
-
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(10, "$").tickFormat(d3.format("$.0s")))
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("text-anchor", "end")
-      .text("Total Property Damage ($)");
-
-  g.selectAll(".bar")
-    .data(data)
-    .enter().append("rect")
-      .attr("class", "bar")
-      .attr("x", function(d) { return x(d.Year); })
-      .attr("y", function(d) { return y(d.TotalDamage); }) // parseInt for d.TotalDamage?
-      .attr("width", x.bandwidth())
-      .attr("height", function(d) { return height - y(d.TotalDamage); });
-});
-
-  /* 
-    // STACKED BAR CHART CODE
-    var svg = d3.select("svg"),
-      margin = {top: 20, right: 20, bottom: 20, left: 20},
+    // STACKED BAR CHART: http://bl.ocks.org/mbostock/3886208
+    var svg = d3.select("#bar-chart"),
+      margin = {top: 20, right: 0, bottom: 20, left: 60},
       width = +svg.attr("width") - margin.left - margin.right,
       height = +svg.attr("height") - margin.top - margin.bottom,
       g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var x = d3.scaleBand()
-      .rangeRound([0, width])
-      .padding(0.1)
-      .align(0.1);
+     var x = d3.scaleBand()
+        .rangeRound([0, width])
+        .padding(0.1)
+        .align(0.1);
+
+    // console.log("DOMAIN X " + x.domain());
+    // console.log("RANGE X " + x.range());
 
     var y = d3.scaleLinear()
       .rangeRound([height, 0]);
 
-    console.log("HEY HERE");
-    console.log(y);
+    // console.log("DOMAIN Y " + y.domain());
+    // console.log("RANGE Y " + y.range());
+    // for(i = 0; i <= 1.0; i += 0.1) {
+    //   console.log(y(i));
+    // }
 
     var z = d3.scaleOrdinal()
-      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+      .range([
+        "#cd4a4a", // mahogany
+        "#ff5349", // red orange
+        "#ff7538", // orange
+        "#ffa343", // neon carrot
+        "#ffcf48", // sunglow
+        "#fdfc74", // laser lemon
+        "#b2ec5d", // inch worm
+        "#1cac78", // green
+        "#158078", // pine green
+        "#1ca9c9", // pacific blue
+        "#1a4876", // midnight blue
+        "#5d76cb", // indigo
+        "#7442c8", // purple heart
+        "#9d81ba", // purple mountain's majesty
+        "#c0448f", // red violet
+        "#f664af", // magenta
+        "#ffaacc", // carnation pink
+        "#c8385a", // maroon
+        "#fc2847", // scarlet
+      ]);
+
+    // console.log("DOMAIN Z " + z.domain());
+    // console.log("RANGE Z " + z.range());
+    // console.log(z(0));
+    // console.log(z(1));
+    // console.log(z(3));
+    // console.log(z(2));
+    // console.log(z(2));
 
     var stack = d3.stack();
 
-    d3.csv("damage-per-storm-per-year.csv", function(error, data) {
+    d3.csv("totals_all_edited.csv", function(error, data) {
+     
         if (error) throw error;
-        console.log(data);
 
-        data.sort(function(a, b) { return b.total - a.total; });
+        // Using 'for' loop to change the data
+        for(var i = 0; i < data.length; i++) {
+          // Get data object
+          var d = data[i];
+          var total = 0;
+          // Runs thru every property of the data object
+          for(var prop in d) {
+            // If property is an empty string, set it to 0. (Downloaded CSV had missing data.)
+            if (d[prop] == "") {
+              d[prop] = 0;
+            }
+            var v = parseInt(d[prop]);
+            // Accumulates the total repeatedly
+            total += v;
+          }
+          // Set a new attribute on the data object
+          data[i].Total = total;
+        }
 
-        x.domain(data.map(function(d) { return d.Year; }));
-        y.domain([0, d3.max(data, function(d) { return d.total; })]).nice();
-        z.domain(data.columns.slice(1));
+        data.sort(function(a, b) { return b.YEAR - a.YEAR; });
+
+        x.domain(data.map(function(d) { return d.YEAR; }));
+        // To size the height of the y-axis: the maximum of the Total value of each object in the data
+        y.domain([0, d3.max(data, function(d) { return d.Total; })]);
+        z.domain(data.columns.slice(0, -1));
+
+        var columns = data.columns.slice(0, -1)
+        var stackData = stack.keys(columns)(data)
+        console.log("columns: " + columns);
+        console.log("data: " + data);
+        console.log("stackData: " + stackData);
 
         g.selectAll(".serie")
-          .data(stack.keys(data.columns.slice(1))(data))
+          .data(stackData)
           .enter().append("g")
             .attr("class", "serie")
             .attr("fill", function(d) { return z(d.key); })
           .selectAll("rect")
           .data(function(d) { return d; })
           .enter().append("rect")
-            .attr("x", function(d) { return x(d.data.Year); })
+            .attr("x", function(d) { return x(d.data.YEAR); })
             .attr("y", function(d) { 
-                console.log('HEY GOT: ', d); 
-                console.log('HEY GOT 2:', d[1]);
-                //console.log('HEY GOT 3:', y(d[1]));
-                //return y(d[1]); 
-                return d[1]; 
+                var ddd = d[1]
+                return ddd === NaN ? y(0) : y(ddd) 
               })
-            //.attr("height", function(d) { return y(d[0]) - y(d[1]); })
-            .attr("height", function(d) { return d[1] - d[0]; })
-            .attr("width", x.bandwidth());
+            .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+            .attr("width", x.bandwidth())
+
+            // On-click popups for each year (based on index[#])
+            .on("click", function(g,i) {
+              var intro = "Most damaging storms:";
+              if (i == 0) {
+                alert(intro + "\nFloods - $9,723,410,839 \nHail/Ice - $3,203,038,030 \nWildfires - $132,872,000"); // 2016
+              } else if (i == 1) {
+                alert(intro + "\nFloods - $2,536,594,969 \nHail/Ice - $645,989,620 \nSnow/Blizzard - $436,600,500"); // 2015
+              } else if (i == 2) {
+                alert(intro + "\nFloods - $2,692,611,189 \nHail/Ice - $1,447,292,250 \nFunnel Cloud/Tornado - $622,070,000"); // 2014
+              } else if (i == 3) {
+                alert(intro + "\nFunnel Cloud/Tornado - $3,642,169,750 \nFlood - $2,203,832,530 \nHail/Ice - $1,335,475,470"); // 2013
+              } else if (i == 4) {
+                alert(intro + "\nFlood - $21,548,157,600 \nWind - $4,061,688,130 \nHail/Ice - $2,415,807,760"); // 2012
+              } else if (i == 5) {
+                alert(intro + "\nFunnel Cloud/Tornado - $9,689,280,799 \nFlood - $8,019,956,650 \nDrought - $810,140,000"); // 2011
+              } else if (i == 6) {
+                alert(intro + "\nFlood - $3,935,463,938 \nHail/Ice - $3,433,847,750 \nFunnel Cloud/Tornado - $1,136,921,450"); // 2010
+              } else if (i == 7) {
+                alert(intro + "\nHail/Ice - $2,610,961,250 \nThunderstorm Wind - $1,397,967,250 \nFlood - $1,325,817,629"); // 2009
+              } else if (i == 8) {
+                alert(intro + "\nHurricane/Typhoon - $17,544,715,250 \nFlood - $3,406,742,310 \nFunnel Cloud/Tornado - $1,845,633,040"); // 2008
+              } else if (i == 9) {
+                alert(intro + "\nHail/Ice - $1,938,567,250 \nFlood - $1,833,012,460 \nWildfire - $1,370,093,700"); // 2007
+              } else if (i == 10) {
+                alert(intro + "\nFlood - $3,280,164,070 \nHail/Ice - $1,381,618,000 \nFunnel Cloud/Tornado - $702,298,000"); // 2006
+              } else if (i == 11) {
+                alert(intro + "\nHurricane/Typhoon - $93,065,303,600 (Hurricane Katrina) \nFlood - $1,629,616,379 \nThunderstorm Wind - $398,724,100"); // 2005
+              } else if (i == 12) {
+                alert(intro + "\nHurricane/Typhoon - $18,904,654,999 (one year after Hurricane Katrina) \nWind - $3,312,783,160 \nFlood - $1,733,420,249"); // 2004
+              } else if (i == 13) {
+                alert(intro + "\nFlood - $2,548,810,788 \nWildfire - $2,331,612,330 \nHurricane/Typhoon - $1,886,807,299"); // 2003
+              } else if (i == 14) {
+                alert(intro + "\nHail/Ice - $1,026,127,940 \nHurricane/Typhoon - $942,111,010 \nFunnel Cloud/Tornado - $801,261,200"); // 2002
+              } else if (i == 15) {
+                alert(intro + "\nHurricane/Typhoon - $5,187,777,999 \nHail/Ice - $2,378,373,440 \nFlood - $1,237,203,999"); // 2001
+              } else if (i == 16) {
+                alert(intro + "\nWildfire - $2,109,242,200 \nHail/Ice - $1,391,443,169 \nFlood - $1,255,576,949"); // 2000
+              } else if (i == 17) {
+                alert(intro + "\nHurricane/Typhoon - $4,190,107,000 \nFunnel Cloud/Tornado - $1,990,124,450 \nFlood - $1,420,867,269"); // 1999
+              } else if (i == 18) {
+                alert(intro + "\nHurricane/Typhoon - $3,546,554,000 \nFlood - $2,442,154,449 \nHail/Ice - $1,790,520,890"); // 1998
+              } else if (i == 19) {
+                alert(intro + "\nFlood - $6,716,428,600 \nFunnel Cloud/Tornado - $730,826,250 \nHurricane/Typhoon - $667,640,000"); // 1997
+              } else if (i == 20) {
+                alert(intro + "\nFlood - $2,156,455,000 \nHurricane/Typhoon - $1,403,162,000 \nFunnel Cloud/Tornado - $719,599,550"); // 1996
+              }
+            });
+
+            // Tooltip for each section of a bar (?)
+            // .on("mouseover", function(g,i) {
+            //   console.log(g);
+            //   console.log(i);
+            // });
 
         g.append("g")
             .attr("class", "axis axis--x")
             .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x));
+            .call(d3.axisBottom(x))
+
+        // Tweak y-axis $ values to remove all format l
+        formatValue = d3.format("$.2s");
 
         g.append("g")
             .attr("class", "axis axis--y")
-            .call(d3.axisLeft(y).ticks(10, "s"))
+            // Call the function to reformat: Only give the highest y-axis value a full label
+            .call(d3.axisLeft(y).ticks(10).tickFormat(function(d,i) {
+              if (i == 9) {
+                return formatValue(d).replace('G', ' Billion');
+              } else {
+                return formatValue(d).replace('G', '');
+              }
+            }))
           .append("text")
             .attr("x", 2)
-            //.attr("y", y(y.ticks(10).pop()))
-            .attr("y", y.ticks(10).pop())
+            .attr("y", y.ticks(/*10*/).pop())
             .attr("dy", "0.35em")
             .attr("text-anchor", "start")
-            .attr("fill", "#000")
+            .attr("fill", "#111")
             .text("Property Damage");
 
         var legend = g.selectAll(".legend")
-          .data(data.columns.slice(1).reverse())
+          .data(data.columns.slice(0, -1).reverse())
           .enter().append("g")
             .attr("class", "legend")
             .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; })
-            .style("font", "10px sans-serif");
+            .style("font", "bold 11px Arial, Helvetica, sans-serif");
 
         legend.append("rect")
             .attr("x", width - 18)
@@ -161,18 +233,18 @@ d3.csv("damage-per-storm-per-year.csv", function(d) {
             .attr("dy", ".35em")
             .attr("text-anchor", "end")
             .text(function(d) { return d; });
+        
     });
 
-    function type(d, i, columns) {
-      for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-      d.total = t;
-      return d;
-    }
-  */
-
+    // function type(d, i, columns) {
+    //   console.log("TYPE: ", d, i, columns)
+    //   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+    //   d.total = t;
+    //   return d;
+    // }
   </script>
   
-  <footer>A <a href="https://generalassemb.ly/">General Assembly</a> project by <a href="http://rozeznmetal.com/">Analee Kasudia</a>. Read the <a href="scope.html">scope</a>.</footer>
+  <footer>&copy; 2016 Analee Kasudia. All rights reserved.</footer>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 # PROJECT OVERVIEW
 
-The Financial Impact of Storms in the Each U.S. State (by month and year)
+The Financial Impact of Storms in the U.S.
 
 _____________________
 
@@ -75,21 +75,25 @@ The NOAA has the segmented storm data in PDFs, which need to be extracted (read:
 
 * Avalanche
 * Cold Wind/Chill (Cold Wind/Chill, Extreme Cold Wind/Chill)
-* Drought -- crop damage only?
-* Dust Storm
+* Drought
+* Dust Storm (Dust Devil, Dust Storm)
 * Flood (Coastal Flood, Debris Flow, Flash Flood, Flood, High Surf, Lakeshore Flood)
 * Fog/Smoke (Dense Smoke, Dense Fog, Freezing Fog)
 * Frost/Freeze
 * Hail/Ice (Hail, Ice Storm, Sleet)
-* Rain
-* Hurricane
-* Lightning (Lightning, Marine Lightning)
+* Heat (Excessive Heat, Heat)
+* High Wave (Seiche, Sneakerwave)
+* Rain (Rain, Tropical Storm)
+* Hurricane (Hurricane, Storm Surge/Tide, Waterspout)
+* Lightning
 * Snow/Blizzard (Blizzard, Heavy Snow, Lake-Effect Snow)
-* Strong Wind (High Wind, Marine High Wind, Strong Wind, Marine Strong Wind)
-* Thunderstorm Wind (Thunderstorm Wind, Marine Thunderstorm Wind)
+* Strong Wind (High Wind, Strong Wind)
+* Thunderstorm Wind
 * Tornado
 * Wildfire
 * Winter Storm/Weather (Winter Weather, Winter Storm)
+
+Do not include any storms starting with 'Marine' as they only affect the Atlantic and Pacific Oceans, not land.
 
 ________________________________
 
@@ -110,7 +114,8 @@ ________________________
 **ERROR: XMLHttpRequest cannot load
 **RESOLUTION: Had to run a local server; used Firebase and put my files in my /public folder for testing.
 
-**ERROR: (Multiple errors in custom JSON file)
-**RESOLUTION: I had either one too many or not enough brackets.
+**ERROR: Multiple errors in custom JSON file.
+**RESOLUTION: I had either one too many or not enough brackets. Ultimately worked with a custom CSV's instead of JSON file. (There were two aspects of the custom CSV's: At the beginning of the project I manually compiled them from data shown in PDF's. Later I was helped with another developer's Python script to automatically download CSV's from the NOAA's site and be reformatted for the purpose of this project. I compared the data from the PDF's with the existing CSV's and noticed huge differences in numbers. Maybe it was my human error, or an inconsistency in the NOAA's PDF and CSV formats. Either way, I'd like to forward this project to them and get their thoughts.)
 
-**ERROR: x-axis, y-axis, and key/legend render - but not the chart. and there are no logged errors.
+**ERROR: Bars in stacked bar chart not rendering; but key/legend is.
+**RESOLUTION: Had to include a 'for' loop to loop through the 'Total' values, which were created in the Javascript rather than a column added in the CSV file.

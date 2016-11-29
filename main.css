@@ -19,7 +19,7 @@ footer a:last-of-type {border-right: none;}
 footer p {float: right; display: inline-block;}
 
 header {width: 100%; margin: 90px 0; overflow: hidden;}
-header h1 {float: left; width: 480px; padding: 5px 0 0; text-align: center; font: normal 60px/72px 'Rock Salt', cursive; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: #fff; border-radius: 4px;}
+header h1 {float: left; width: 480px; padding: 5px 0 0; text-align: center; font: normal 60px/72px 'Rock Salt', cursive; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; border-radius: 4px;}
 header h2 {float: right; width: 480px; font: 16px/26px 'Slabo 13px', serif;}
 
 main, #wrapper {width: 1020px; margin: 0 auto;}
@@ -44,8 +44,8 @@ main p a, header h2 a {color: #08a;}
 #stories ul li {padding: 12px 10px 10px; border-top: 1px solid #ddd; overflow: hidden;}
 #stories ul li a {font-weight: bold; color: #111;}
 #stories ul li:hover a, #stories ul li:focus a, #stories ul li a:hover, #stories ul li a:focus, #stories ul li:hover a i, #stories ul li:focus a i {color: #08a;}
-#stories ul li a i {font-weight: normal; font-size: 12px; line-height: 20px; color: #aaa;}
-#stories ul li a span {display: inline-block; float: right; width: 520px;}
+#stories ul li a i {font-weight: bold; font-size: 12px; line-height: 20px; color: #aaa;}
+#stories ul li a span {display: inline-block; float: right; width: 560px;}
 
 #timeline {overflow-x: scroll; overflow-y: hidden; clear: both; width: 100%; height: 250px; border-left: 3px solid #111; border-right: 3px solid #111;}
 #timeline div {overflow: hidden; width: 1450px; height: 250px; padding: 0 25px;}
@@ -105,7 +105,8 @@ main p a, header h2 a {color: #08a;}
 @media only screen and (max-width: 480px) {
     header {margin: 0; padding: 40px 0 20px; border-radius: 0;}
     header h1 {font-size: 36px; line-height: 42px;}
-    header h2 {padding: 0 25px;}
+    header h2 {padding: 0 15px;}
+    header h2 span {display: none;}
     figure, figure img, footer, main, main p, #work-mobile-only, section#stories {width: 100%;}
     figure figcaption, main h1, main p {padding-left: 20px; padding-right: 20px;}
     #stories ul li {padding-left: 20px; padding-right: 20px;}

@@ -1,19 +1,20 @@
-/*
 * {margin: 0; padding: 0; list-style: none; text-decoration: none;}
 a {cursor: pointer;}
+body {background: #fcfcfc;}
 
-.axis path {display: none;}
-.bar {fill: steelblue;}
-*/
+.axis line, .axis path {fill: none; stroke: #bbb; shape-rendering: crispEdges;}
+.axis text {font: 11px Arial, Helvetica, sans-serif;}
+.axis--x text {font-weight: bold;}
+.axis--x path {display: none;}
 
-.bar {
-  fill: gray;
-}
+footer {padding: 60px 15px; font: 11px/15px Arial, Helvetica, sans-serif; text-align: right; color: #aaa;}
 
-.bar:hover {
-  fill: black;
-}
+header {padding: 10px 0; background: #111; overflow: hidden;}
+header a {float: right; margin: 5px 15px 0 0; font: bold 12px/16px Arial, Helvetica, sans-serif; color: #0ac;}
+header h1 {float: left; margin-left: 15px; font: 16px/26px 'Slabo 13px', serif; color: #fff;}
 
-.axis--x path {
-  display: none;
-}
+main {margin: 60px auto; width: 1000px;}
+main h2 {margin-bottom: 15px; font: 48px/60px 'Fjalla One', sans-serif; text-align: center;}
+main p {padding-bottom: 15px; font: 16px/26px 'Slabo 13px', serif; text-align: center;}
+
+svg {display: block; margin: 0 auto;}
