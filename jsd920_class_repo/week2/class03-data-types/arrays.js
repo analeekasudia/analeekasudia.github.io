@@ -11,8 +11,10 @@
  * Use "image1.png", "image2.png", and "image3.png" as the array values.
  */
 
-// Your code here
-
+var imageFilenames = ['image1.png', 'image2.png', 'image3.png']
+var q1 = imageFilenames
+console.log("Question 1: " + q1)
+console.log("")
 
 /**
  * Question 2
@@ -20,8 +22,10 @@
  * in variable q2.
  */
 
-// Your code here
-
+var firstImageFilename = imageFilenames[0]
+var q2 = firstImageFilename
+console.log("Question 2: " + q2)
+console.log("")
 
 /**
  * Question 3
@@ -29,8 +33,10 @@
  * and store it in variable q3
  */
 
-// Your code here
-
+var lengthOfImageFilenames = imageFilenames.length
+var q3 = lengthOfImageFilenames
+console.log("Question 3: " + q3)
+console.log("")
 
 /**
  * Question 4
@@ -38,8 +44,10 @@
  * in variable q4. Hint: How can we get the number of elements in the array?
  */
 
-// Your code here
-
+var lastImageFilename = imageFilenames[imageFilenames.length - 1]
+var q4 = lastImageFilename
+console.log("Question 4: " + q4)
+console.log("")
 
 // Bonus 1
 // Using the array from Question 1, capitalize the first letter of each 
@@ -50,7 +58,13 @@
 // -using the .join("") method wil join the elements back into a string
 // -using .toUpperCase() will covert a letter from lower to upper case
 
-// Your code here
+var bonus1 = []
+q1[0] = q1[0].split("")
+q1[0][0] = q[0][0].toUpperCase()
+q1[0] = q1[0].join("")
+bonus1[0] = q1[0]
+console.log("Bonus 1: " + bonus1)
+console.log("")
 //Perform the same action for each item in the array
 
 
@@ -69,7 +83,13 @@
  * an array of numbers with values 2, 3, 4, and 5.
  */
 
-// Your code here
+var numbers = [1, 2, 3, 4]
+var numbersBumpedUp = numbers.map(function(number) {
+    return number + 1
+})
+var q5 = numbersBumpedUp
+console.log("Question 5: " + q5)
+console.log("")
 
 
 /**
@@ -78,7 +98,14 @@
  * (average = sum of all numbers/number of numbers). Store the average in q6.
  */
 
-// Your code here
+var sum = 0
+for (var i = 0; i < numbersBumpedUp.length; i++) {
+    sum += numbersBumpedUp[i]
+}
+var averageOfNumbersBumpedUp = sum / numbersBumpedUp.length
+var q6 = averageOfNumbersBumpedUp
+console.log("Question 6: " + q6)
+console.log("")
 
 
 /** 
@@ -87,7 +114,8 @@
  * color "blue". Store the new array in q8.
  */
 
- // Your code here
+ var q8 = ["green","blue","yellow"].filter(function(d,i) { return d == "blue" } )
+ console.log("Question 8: " + q8)
 
 
  /** - BONUS 2
@@ -99,7 +127,11 @@
  * - the .indexOf() method can be used to find the first matching value of an element in an array
  */
 
- // Your code here
+ var bonus2 = ["a","b","c","a","b"].reduce(function(arr,c){
+  if(arr.indexOf(c) < 0 ) { arr.push(c) }
+  return arr},[]
+  )
+  console.log("Question 9: " + q9)
 
 
  /** - BONUS 3
@@ -111,4 +143,14 @@
   * - the .reduce() method can be used to sum all the values in an array
  */
 
+ var arr = [1,2,3,1,2]
+ var mid = 1
+ var left,right
+ arr.forEach(function(d,i){
+  if(mid != arr.length-1){
+    left = arr.slice(0,mid).reduce(function(a,b){return a+b });
+    right = arr.slice(mid+=1).reduce(function(a,b){return a+b })
+    if( left == right ) { console.log("we have a winner at index position:", mid) }
+  }
+ })
 

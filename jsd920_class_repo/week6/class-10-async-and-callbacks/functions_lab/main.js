@@ -1,3 +1,5 @@
+// Review Solution
+
 /**
  *
  * Independent Practice: Functions and Callbacks
@@ -28,9 +30,35 @@
  *
  */
 
-function makeCountingFunction() {}
+function makeCountingFunction(predicate) {
+	return function (numbers) {
+		var count = 0;
+		numbers.forEach(function (num) {
+			if (predicate(num)) {
+				count += 1;
+			}
+		})
+		return count;
+	}
+}
 
-function isOdd() {}
+function isOdd(number) {
+	if (number % 2 === 1) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+//function isOdd (number) { return number %2 == 1}
+
+function isEven (number) {
+	if (number % 2 === 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 // =============================================================================
 // The code below should work without modification.
@@ -54,3 +82,36 @@ var countTheOdds = makeCountingFunction(isOdd);
 var oddCount = countTheOdds([1, 2, 3, 4, 5, 6, 7]);
 console.log('There are ' + oddCount + ' odd numbers.');
 // expected output: There are 4 odd numbers.
+
+//////////////
+// Bonus 1 ///
+//////////////
+var countTheEvens = makeCountingFunction(isEven);
+var evenCount = countTheEvens([1,2,3,4,5,6,7]);
+console.log('There are ' + evenCount + ' even numbers.');
+// expected output: There are 3 even numbers.
+
+/////////////
+// Bonus 2 //
+/////////////
+function makeSumFunction (predicate) {
+	return function (numbers) {
+		var sum = 0;
+		numbers.forEach(function (num) {
+			if (predicate(num)) {
+				sum += num;
+			}
+		})
+		return sum;
+	}
+}
+
+var sumTheOdds = makeSumFunction(isOdd);
+var oddSum = sumTheOdds([1,2,3,4,5,6,7]);
+console.log('The sum of the odd numbers is: ' + oddSum);
+// expected output: The sum of the odd numbers is: 16
+
+var sumTheEvens = makeSumFunction(isEven);
+var evenSum = sumTheEvens([1,2,3,4,5,6,7]);
+console.log('The sum of the odd numbers is: ' + evenSum);
+// expected output: The sum of the odd numbers is: 12

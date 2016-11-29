@@ -1,3 +1,5 @@
+// Review Solution
+
 'use strict';
 
 // JSON is a subset of the object literal notation of JavaScript; we use JSON to transfer data between programs.
@@ -44,7 +46,7 @@ var eddie = {name:"Eddie Vedder", age:49,};
 // Turn the `grungeAlbums` JavaScript object into a JSON string, and store it in `grungeAlbumsJSON`.
 
 
-var grungeAlbums = "{
+var grungeAlbums = {
   "albums":[
     {
         "name": "Bleach",
@@ -77,7 +79,9 @@ var grungeAlbums = "{
         "unitsSold": 4770000
     }
   ]
-}"
+};
+
+var grungeAlbumsJSON = JSON.stringify(grungeAlbums);
 
 // [ Step 4 ]
 // Imagine that we only had JSON to work with, and wanted to convert it to a JS Object.
@@ -93,13 +97,45 @@ var grungeAlbums = "{
 //  Artist: Artist name
 //  Units sold: 31234
 
+var grungeAlbumsJSON = JSON.stringify(grungeAlbums);
+// console.log(grungeAlbumsJSON);
+var grungeAlbumsParsed = JSON.parse(grungeAlbumsJSON);
+var justAlbums = grungeAlbumsParsed.albums;
+console.log(justAlbums.length);
+console.log();
+// console.log(grungeAlbumsParsed.albums[0].name);
+
+for (var i = 0; i < justAlbums.length; i++){
+    console.log("Album: " + justAlbums[i].name);
+    console.log("Artist: " + justAlbums[i].artist);
+    console.log("Units Sold: " + justAlbums[i].unitsSold);
+    console.log();
+};
 
 // [ Step 5 ]
 // Create a custom JSON using the JSON validator from Step 1.
 // Convert it back to a JavaScript object, change it, and then convert it back to JSON again. Compare it to your original - how has it changed?
 // Use variables to store each state (as JSON / as a JavaScript Object)
 
+var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue"
+};
 
+/*
+console.log("This is the person object:");
+console.log(person);
+var personToJSON = JSON.stringify(person);
+console.log();
+console.log("After using JSON.stringify, the person object is now converted to a JSON file.");
+console.log(personToJSON);
+console.log();
+console.log("After using JSON.parse, the JSON file is converted back to an object");
+var personJSON2Object = JSON.parse(personToJSON);
+console.log(personJSON2Object);
+*/
 
 
 

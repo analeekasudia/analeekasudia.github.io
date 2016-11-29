@@ -1,3 +1,5 @@
+// Review Solution
+
 // INSTRUCTOR CODE ALONG
 // 1. Enter an item into #new-item
 // 2. Submit the form #item-form (remember to prevent the form's default behavior!)
@@ -14,19 +16,38 @@
 
 // similar to window.onload
 $(document).ready(function () {
-	  var list = $('#list')
+    // grab the ul
+    var list = $('#list')
+    // grab the input field
     var input = $('#new-item')
+    // add click event to button
     $('#clickme').click(function(event){
+      // prevents default behavior of form
       event.preventDefault()
+      // confirm there is something in the input when submitted
       if(input.val() == "") {alert("type something")}
       else { 
+        // create a new li with the input value
         var item = $('<li>').html(input.val()) 
+        // prepend 'archive' to the new li
         list.append(item)
+        // append the li to the ul
         prepend(item)
+        // reset the focus of the input; puts a blue border around input
         input.val("").focus()
       }//else
     })//click event
 })//ready event
+
+//add event listener on ul so it's aware of newly added children
+$("ul").on('click',".archive",function(){
+  $(this).parent().remove() //$(this) will be the span and .parent() the li
+})
+//prepend function will add 'archive' to li
+function prepend(lis){
+  var archive = $("<span>").html("archive - ").addClass("archive")
+  $(lis).prepend(archive)
+}
 
 
 

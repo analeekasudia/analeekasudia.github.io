@@ -1,15 +1,16 @@
+<!-- Review Solution -->
 <!DOCTYPE html>
 <html>
 	<head></head>
 	<body>
 		<div id="title">
-			<h1> US Presidents</h1>
-			<p>A JSD Project</p>
+			<!-- <h1> US Presidents</h1>
+			<p>A JSD Project</p> -->
 		</div>
 
 		<h4>jQuery List</h4>
 		<select id="jquery-list">
-			<option value="">Washington</option>
+			<!-- <option value="">Washington</option>
 			<option value="">Adams</option>
 			<option value="">Jefferson</option>
 			<option value="">Madison</option>
@@ -52,11 +53,29 @@
 			<option value="">Bush</option>
 			<option value="">Clinton</option>
 			<option value="">Bush</option>
-			<option value="">Obama</option>
+			<option value="">Obama</option> -->
 		</select>
 
-		<h4>Handlebars List</h4>
+		<div id="hbtitle">
+			<!-- <h4>Handlebars List</h4> -->
+			<!-- <p>A Handlbars Project</p> -->
+		</div>
 		<div id="handlebars-list"></div>
+
+		<!-- Title Template -->
+		<script id="title-template" type="text/x-handlebars-template">
+    		<h4>{{title}}</h4>
+    		<p>{{description}}</p>
+  		</script>
+
+  		<!-- President Template -->
+	 	<script id="president-template" type="text/x-handlebars-template">
+			<select>
+				{{#each presidents}}
+					<option>{{this}}</option>
+				{{/each}}
+			</select>
+		</script>
 
 		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 		<script src="handlebars.js"></script>
