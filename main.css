@@ -11,6 +11,7 @@ figure figcaption {margin: 0 auto 60px; font: 12px/20px Arial, Helvetica, sans-s
 figure figcaption a, main p.similar-work a {color: #aaa; /* repeats on :hover/:focus */ text-decoration: underline;}
 figure figcaption a:hover, header h2 a:hover, header h2 a:focus, main p a:hover, main p a:focus, main p.similar-work a:hover, main p.similar-work a:focus, #work h3 a:hover, #work h3 a:focus {text-decoration: underline;}
 figure img {display: block; margin: 0 auto 25px; border: 1px solid #ddd;}
+figure img.width-960 {width: 960px; height: auto;}
 
 footer {clear: both; width: 1020px; margin: 180px auto 90px; font: 11px/15px Arial, Helvetica, sans-serif; text-align: center; color: #aaa; overflow: hidden;}
 footer a {float: left; margin-right: 15px; padding-right: 15px; border-right: 1px solid #ddd; color: #111;}
@@ -40,7 +41,7 @@ main p a, header h2 a {color: #08a;}
 #work ul li img {width: 100%; height: 100%; border-radius: 4px;}
 #work-mobile-only {display: none;}
 
-#stories {width: 720px; margin: 30px auto; font: 16px/26px Arial, Helvetica, sans-serif;}
+#stories {width: 720px; margin: 30px auto 60px; font: 16px/26px Arial, Helvetica, sans-serif;}
 #stories ul li {padding: 12px 10px 10px; border-top: 1px solid #ddd; overflow: hidden;}
 #stories ul li a {font-weight: bold; color: #111;}
 #stories ul li:hover a, #stories ul li:focus a, #stories ul li a:hover, #stories ul li a:focus, #stories ul li:hover a i, #stories ul li:focus a i {color: #08a;}
@@ -86,7 +87,7 @@ main p a, header h2 a {color: #08a;}
 @media only screen and (max-width : 959px) {
     figure, main, main p {width: 480px; margin: 0 auto;}
     figure figcaption {margin-bottom: 100px; text-align: center;}
-    figure img {width: 480px; height: auto;}
+    figure img, figure img.width-960 {width: 480px; height: auto;}
     footer, #work-mobile-only {display: block; width: 60%; margin: 0 auto 50px; border-top: 3px solid #111;}
     footer a, #work-mobile-only ul li a {width: 100%; padding: 10px 0; border-right: none; border-bottom: 1px solid #ddd;}
     footer p {float: none; clear: both; margin-top: 15px; text-align: center;}
