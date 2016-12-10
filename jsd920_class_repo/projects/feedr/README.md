@@ -18,29 +18,44 @@ Use this section to document all helper functions. These functions should be ver
 ## JSON Data Keys
 
 Business:
-https://newsapi.org/bbc-sport-api
-https://newsapi.org/business-insider-api
-https://newsapi.org/business-insider-uk-api
-https://newsapi.org/cnbc-api
-
-Entertainment:
-https://newsapi.org/buzzfeed-api
-https://newsapi.org/daily-mail-api
-https://newsapi.org/entertainment-weekly-api
+https://newsapi.org/financial-times-api
+https://newsapi.org/fortune-api
+https://newsapi.org/the-economist-api
+https://newsapi.org/the-wall-street-journal-api
 
 General:
-https://newsapi.org/abc-news-au-api
 https://newsapi.org/associated-press-api
-https://newsapi.org/bbc-news-api
-https://newsapi.org/cnn-api
+https://newsapi.org/google-news-api
+https://newsapi.org/independent-api
+https://newsapi.org/newsweek-api
+https://newsapi.org/new-york-magazine-api
+https://newsapi.org/reuters-api
+https://newsapi.org/the-guardian-uk-api
+https://newsapi.org/the-hindu-api
+https://newsapi.org/the-new-york-times-api
+https://newsapi.org/the-washington-post-api
+https://newsapi.org/time-api
+https://newsapi.org/usa-today-api
+
+Science:
+https://newsapi.org/national-geographic-api
+https://newsapi.org/new-scientist-api
 
 Sports:
 https://newsapi.org/bbc-sport-api
 https://newsapi.org/espn-api
+https://newsapi.org/football-italia-api
+https://newsapi.org/four-four-two-api
+https://newsapi.org/nfl-news-api
+https://newsapi.org/sky-sports-news-api
+https://newsapi.org/talksport-api
 
 Technology:
 https://newsapi.org/ars-technica-api
-https://newsapi.org/engadget-api
+https://newsapi.org/hacker-news-api
+https://newsapi.org/recode-api
+https://newsapi.org/the-next-web-api
+https://newsapi.org/the-verge-api
 
 
 ## jQuery Functional Requirements
